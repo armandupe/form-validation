@@ -1,0 +1,312 @@
+form {
+  margin: 0 auto;
+  width: 1500px;
+  background-color: #efebde;
+}
+
+.form-error {color: red;}
+
+
+h1 {
+  color: #003366;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+fieldset {border-color: #d8d7c7;}
+
+legend {
+  color: #386dd7;
+  font-style: italic;
+}
+
+label {font-weight: bold;}
+
+.star {
+  color: #fa4b47;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+}
+
+input[placeholder] {padding-left: 5px;}
+
+.applicant {margin: 0 50px 0 50px;}
+
+.applicant label {
+  width: 65px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: right;
+  margin-left: 235px;
+}
+
+.applicant input {margin-bottom: 10px;}
+
+input[name="last_name"],
+input[name="first_name"],
+input[name="patronymic"] {width: 605px;}
+
+input[name="patronymic"] {margin-left: 8px;}
+
+select[name="status"] {width: 610px;}
+
+.registration-address label {
+  width: 65px;
+  margin-left: 220px;
+}
+
+input[name="region"],
+input[name="district"],
+input[name="city"],
+input[name="town"],
+input[name="street"] {width: 600px;}
+
+input[name="city"],
+input[name="town"],
+input[name="street"] {width: 605px;}
+
+input[name="city"] {margin-left: 8px;}
+
+label[for="town"] {
+  width: 150px;
+  margin-left: 135px;
+}
+
+input[name="town"],
+input[name="index"],
+input[name="housing"],
+input[name="room"] {margin-left: 8px;}
+
+input[name="index"],
+input[name="house"],
+input[name="housing"],
+input[name="room"] {width: 100px;}
+
+.residential-address label {
+  width: 65px;
+  margin-left: 220px;
+}
+
+label[for="town-residential"] {
+  width: 150px;
+  margin-left: 135px;
+}
+
+input[id="town-residential"] {margin-left: 8px;}
+
+.main-document select,
+textarea {width: 600px;}
+
+.main-document label {
+  width: 65px;
+  margin-left: 220px;
+}
+
+label[for="document-type"] {
+  width: 110px;
+  margin-left: 175px;
+  margin-bottom: 10px;
+}
+
+input[name="document-serial"] {
+  width: 100px;
+  margin-left: 8px;
+}
+
+input[name="document-number"] {width: 130px;}
+
+label[for="document-date"] {
+  width: 105px;
+  margin-left: 180px;
+}
+
+input[name="document-date"] {width: 130px;}
+
+label[for="document-issued-by"] {
+  width: 105px;
+  position: relative;
+  top: -25px;
+  margin-left: 180px;
+}
+
+label[for="document-issued-by"] + span {
+  position: relative;
+  top: -20px;
+}
+
+.declaration {margin: 0 50px 0 50px;}
+
+.main-document textarea {
+  resize: none;
+  overflow-y: scroll;
+}
+
+label[for="status-form"] {
+  top: -40px;
+  position: relative;
+  margin-left: 190px;
+}
+
+.status-form {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+label[for="status-form"] {margin-left: 170px;}
+
+label[for="status-date"] {margin-left: 185px;}
+
+input[id="status-date"] {margin-top: 10px;}
+
+.child-information label {
+  width: 65px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: right;
+  margin-left: 220px;
+}
+
+.child-information input {margin-bottom: 10px;}
+
+input[name="child-last-name"],
+input[name="child-first-name"],
+input[name="child-patronymic"] {width: 600px;}
+
+input[name="child-patronymic"] {margin-left: 8px;}
+
+input[name="child-date-of-birth"] {width: 130px;}
+
+label[for="child-date-of-birth"] {
+  width: 110px;
+  margin-left: 175px;
+}
+
+.parents-information label {
+  width: 65px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: right;
+  margin-left: 205px;
+}
+
+.parents-information input {
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+input[name="mother-patronymic"],
+input[name="father-patronymic"] {margin-left: 8px;}
+
+label[for="mother-date-of-birth"],
+label[for="father-date-of-birth"] {
+  width: 110px;
+  margin-left: 160px;
+}
+
+input[name="mother-date-of-birth"],
+input[name="father-date-of-birth"] {width: 130px;}
+
+.parents-status {
+  display: inline-block;
+  margin-left: 300px;
+}
+
+.parents-status label {display: inline-block;}
+
+.parents-status input {
+  margin-left: 0;
+  margin-right: 0;
+  width: 20px;
+}
+
+.parents-status label {
+  width: 600px;
+  text-align: left;
+  margin-right: 0;
+  vertical-align: middle;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.penal-institution {padding-left: 80px;}
+
+.penal-institution label {
+  width: 200px;
+  margin-left: 0;
+  vertical-align: middle;
+}
+
+label[for="penal-institution-code"] {margin-bottom: 10px;}
+
+.penal-institution input {
+  margin-left: 0;
+  width: 600px;
+}
+
+.bank-details span {margin-left: 5px;}
+
+.bank-details textarea {
+  width: 600px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  resize: none;
+  overflow-y: scroll;
+}
+
+.bank-details label {
+  width: 600px;
+  margin-left: 250px;
+  text-align: right;
+}
+
+.bank-details input {
+  width: 600px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+label[for="bank-name"] {
+  margin-left: 135px;
+  vertical-align: top;
+}
+
+input[name="bank-BIK"] {margin-left: 8px;}
+
+input[name="bank-INN"] {margin-left: 5px;}
+
+input[name="bank-KPP"] {margin-left: 6px;}
+
+input[name="bank-checking-account"] {margin-left: 17px;}
+
+label[for="bank-name"] + span {vertical-align: top;}
+
+.documents {margin: 0 50px 0 50px;}
+
+.documents-upload {margin-left: 80px;}
+
+.documents-upload p,
+span,
+input {display: inline-block;}
+
+.documents-upload p {width: 600px;}
+
+.documents-upload span {
+  margin-left: 40px;
+  top: -15px;
+  position: relative;
+}
+
+.documents-upload input {
+  margin-left: 5px;
+  top: -20px;
+  position: relative;
+}
+
+input[type="submit"] {margin: 20px 0 20px 805px;}

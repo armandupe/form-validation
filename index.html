@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Форма</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form id="main-form" method="post" action="handler.php">
+      <h1>Заявление на назначение и выплаты единовременного пособия</h1>
+      <fieldset class="applicant">
+        <legend>Заявитель - Физическое лицо</legend>
+        <div>
+          <label for="last_name">Фамилия</label><span class="star">*</span>
+          <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите фамилию" id="last_name" name="last_name" type="text" required>
+        </div>
+        <div>
+          <label for="first_name">Имя</label><span class="star">*</span>
+          <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите имя" id="first_name" name="first_name" type="text" required>
+        </div>
+        <div>
+          <label for="patronymic">Отчество</label>
+          <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите отчество" id="patronymic" name="patronymic" type="text">
+        </div>
+        <div>
+          <label for="status">Статус</label><span class="star">*</span>
+          <select form="main-form" name="status" id="status" required>
+            <option value="">усыновитель</option>
+            <option value="">приемный родитель</option>
+            <option value="">опекун (попечитель)</option>
+          </select>
+        </div>
+        <fieldset class="registration-address">
+          <legend>Адрес регистрации</legend>
+          <div>
+            <label for="region">Регион</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название региона" id="region" name="region" type="text" placeholder="Еврейская автономная область" required> 
+          </div>
+          <div>
+            <label for="district">Район</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название района" id="district" name="district" type="text" placeholder="Если района нет, то поставить прочерк" required> 
+          </div>
+          <div>
+            <label for="city">Город</label>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название города" id="city" name="city" type="text"> 
+          </div>
+          <div>
+            <label for="town">Населенный пункт</label>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название населенного пункта" id="town" name="town" type="text"> 
+          </div>
+          <div>
+            <label for="street">Улица</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название улицы" id="street" name="street" type="text" required> 
+          </div>
+          <div>
+            <label for="index">Индекс</label>
+            <input data-validation="length custom" data-validation-length="6-6" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите 6 цифр" id="index" name="index" type="text"> 
+          </div>
+          <div>
+            <label for="house">Дом</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([А-Яа-я0-9]+)$" data-validation-error-msg="Введите номер дома" id="house" name="house" type="text" required> 
+          </div>
+          <div>
+            <label for="housing">Корпус</label>
+            <input data-validation="custom" data-validation-regexp="^([А-Яа-я0-9]+)$" data-validation-error-msg="Введите номер корпуса" id="housing" name="housing" type="text"> 
+          </div>
+          <div>
+            <label for="room">Квартира</label>
+            <input data-validation="custom" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите номер квартиры" id="room" name="room" type="text"> 
+          </div>
+        </fieldset>
+        <fieldset class="residential-address">
+          <legend>Адрес проживания</legend>
+          <div>
+            <label for="region-residential">Регион</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название региона" id="region-residential" name="region" type="text" placeholder="Еврейская автономная область" required> 
+          </div>
+          <div>
+            <label for="district-residential">Район</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название района" id="district-residential" name="district" type="text" placeholder="Если района нет, то поставить прочерк" required> 
+          </div>
+          <div>
+            <label for="city-residential">Город</label>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название города" id="city-residential" name="city" type="text"> 
+          </div>
+          <div>
+            <label for="town-residential">Населенный пункт</label>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название населенного пункта" id="town-residential" name="town" type="text"> 
+          </div>
+          <div>
+            <label for="street-residential">Улица</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Введите название улицы" id="street-residential" name="street" type="text" required> 
+          </div>
+          <div>
+            <label for="index-residential">Индекс</label>
+            <input data-validation="length custom" data-validation-length="6-6" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите 6 цифр" id="index-residential" name="index" type="text"> 
+          </div>
+          <div>
+            <label for="house-residential">Дом</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([А-Яа-я0-9]+)$" data-validation-error-msg="Введите номер дома" id="house-residential" name="house" type="text" required> 
+          </div>
+          <div>
+            <label for="housing-residential">Корпус</label>
+            <input data-validation="custom" data-validation-regexp="^([А-Яа-я0-9]+)$" data-validation-error-msg="Введите номер корпуса" id="housing-residential" name="housing" type="text"> 
+          </div>
+          <div>
+            <label for="room-residential">Квартира</label>
+            <input data-validation="custom" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите номер квартиры" id="room-residential" name="room" type="text"> 
+          </div>
+        </fieldset>
+        <fieldset class="main-document">
+          <legend>Данные основного документа, удостоверяющего личность</legend>
+          <div>
+            <label for="document-type">Тип документа</label><span class="star">*</span>
+            <select name="document-type" id="document-type" required>
+              <option value="">Паспорт РФ</option>
+              <option value="">Загранпаспорт РФ</option>
+            </select>
+          </div>
+          <div>
+            <label for="document-serial">Серия</label>
+            <input data-validation="length custom" data-validation-regexp="^([0-9]+)$" data-validation-length="4-4" data-validation-error-msg="Введите 4 цифры" id="document-serial" name="document-serial" type="text"> 
+          </div>
+          <div>
+            <label for="document-number">Номер</label><span class="star">*</span>
+            <input data-validation="length custom" data-validation-regexp="^([0-9]+)$" data-validation-length="6-6" data-validation-error-msg="Введите 6 цифр" id="document-number" name="document-number" type="text" required> 
+          </div>
+          <div>
+            <label for="document-date">Дата выдачи</label><span class="star">*</span>
+            <input data-validation="birthdate" data-validation-format="dd.mm.yyyy" placeholder="дд.мм.гггг" id="document-date" name="document-date" type="text" required> 
+          </div>
+          <div>
+            <label for="document-issued-by">Кем выдан</label><span class="star">*</span>
+            <textarea data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" data-validation-error-msg="Заполните поле" name="document-issued-by" id="document-issued-by" cols="30" rows="2" required></textarea>
+          </div>
+        </fieldset>
+      </fieldset>
+      <fieldset class="declaration">
+        <legend>Заявление</legend>
+        <h2>Прошу назначить и выплатить мне единовременное пособие при передаче ребенка на воспитание в семью</h2>
+        <div>
+          <label>Форма устройства</label>
+          <div class="status-form">
+            <div>
+              <input id="status-adoption" name="status-type" value="на усыновление" type="radio" checked> 
+              <label for="status-adoption">на усыновление</label>
+            </div>
+            <div>
+              <input id="status-foster-family" name="status-type" value="в приемную семью" type="radio">
+              <label for="status-foster-family">в приемную семью</label>
+            </div>
+            <div>
+              <input id="status-custody" name="status-type" value="под опеку (попечительство)" type="radio">
+              <label for="status-custody">под опеку (попечительство)</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="status-date">Дата устройства</label><span class="star">*</span>
+          <input data-validation="birthdate" data-validation-format="dd.mm.yyyy" placeholder="дд.мм.гггг" id="status-date" type="text" required>
+        </div>
+        <fieldset class="child-information">
+          <legend>Сведения о ребенке</legend> 
+          <div>
+            <label for="child-last-name">Фамилия</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите фамилию" id="child-last-name" name="child-last-name" type="text" required> 
+          </div>
+          <div>
+            <label for="child-first-name">Имя</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите имя" id="child-first-name" name="child-first-name" type="text" required> 
+          </div>
+          <div>
+            <label for="child-patronymic">Отчество</label>
+            <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите отчество" id="child-patronymic" name="child-patronymic" type="text"> 
+          </div>
+          <div>
+            <label for="child-date-of-birth">Дата рождения</label><span class="star">*</span>
+            <input data-validation="birthdate" data-validation-format="dd.mm.yyyy" placeholder="дд.мм.гггг" id="child-date-of-birth" name="child-date-of-birth" type="text" required> 
+          </div>
+        </fieldset>
+        <fieldset class="parents-information">
+          <legend>Сведения о родителях</legend>
+          <fieldset class="mother-information">
+            <legend>Сведения о матери ребенка</legend>
+            <div>
+              <label for="mother-last-name">Фамилия</label><span class="star">*</span>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите фамилию" id="mother-last-name" name="mother-last-name" type="text" required> 
+            </div>
+            <div>
+              <label for="mother-first-name">Имя</label><span class="star">*</span>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите имя" id="mother-first-name" name="mother-first-name" type="text" required> 
+            </div>
+            <div>
+              <label for="mother-patronymic">Отчество</label>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите отчество" id="mother-patronymic" name="mother-patronymic" type="text"> 
+            </div>
+            <div>
+              <label for="mother-date-of-birth">Дата рождения</label><span class="star">*</span>
+              <input data-validation="birthdate" data-validation-format="dd.mm.yyyy" placeholder="дд.мм.гггг" id="mother-date-of-birth" name="mother-date-of-birth" type="text" required> 
+            </div>
+            <div>
+              <label for="mother-SNILS">СНИЛС</label><span class="star">*</span>
+              <input data-validation="length сustom" data-validation-length="14-14" data-validation-regexp="^([/\-//\s/0-9]+)$" data-validation-error-msg="Введите СНИЛС в корректном формате" id="mother-SNILS" name="mother-SNILS" placeholder="XXX-XXX-XXX XX" type="text" required> 
+            </div>
+          </fieldset>
+          <fieldset class="father-information">
+            <legend>Сведения о отце ребенка</legend>
+            <div>
+              <label for="father-last-name">Фамилия</label><span class="star">*</span>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите фамилию" id="father-last-name" name="father-last-name" type="text" required> 
+            </div>
+            <div>
+              <label for="father-first-name">Имя</label><span class="star">*</span>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите имя" id="father-first-name" name="father-first-name" type="text" required> 
+            </div>
+            <div>
+              <label for="father-patronymic">Отчество</label>
+              <input data-validation="custom" data-validation-regexp="^([/\-/А-Яа-я]+)$" data-validation-error-msg="Введите отчество" id="father-patronymic" name="father-patronymic" type="text"> 
+            </div>
+            <div>
+              <label for="father-date-of-birth">Дата рождения</label><span class="star">*</span>
+              <input data-validation="birthdate" data-validation-format="dd.mm.yyyy" placeholder="дд.мм.гггг" id="father-date-of-birth" name="father-date-of-birth" type="text" required> 
+            </div>
+            <div>
+              <label for="father-SNILS">СНИЛС</label><span class="star">*</span>
+              <input data-validation="length custom" data-validation-length="14-14" data-validation-regexp="^([/\-//\s/0-9]+)$" data-validation-error-msg="Введите СНИЛС в корректном формате" id="father-SNILS" name="father-SNILS" placeholder="XXX-XXX-XXX XX" type="text" required> 
+            </div>
+          </fieldset>
+          <div class="parents-status">
+            <div>
+              <input id="parents-status-jail" name="parents-status-type" value="родители ребенка находятся под стражей или отбывают наказание в виде лишения свободы" type="radio" checked> 
+              <label for="parents-status-jail">родители ребенка находятся под стражей или отбывают наказание в виде лишения свободы</label>
+            </div>
+            <div>
+              <input id="parents-status-freedom" name="parents-status-type" value="родители ребенка не находятся под стражей и не отбывают наказание в виде лишения свободы" type="radio">
+              <label for="parents-status-freedom">родители ребенка не находятся под стражей и не отбывают наказание в виде лишения свободы</label>
+            </div>
+          </div>
+          <fieldset class="penal-institution">
+          <div>
+            <label for="penal-institution-code">Код региона, в котором находится учреждение отбывания наказания</label><span class="star">*</span>
+            <input data-validation="custom length" data-validation-regexp="^([0-9]+)$" data-validation-length="2-3" data-validation-error-msg="Введите корректный код региона" id="penal-institution-code" name="penal-institution-code" type="text" required> 
+          </div>
+          <div>
+            <label for="penal-institution-name">Наименование учреждения отбывания наказания</label><span class="star">*</span>
+            <input data-validation="custom" data-validation-regexp="^([/\-//\s/А-Яа-я]+)$" id="penal-institution-name" name="penal-institution-name" type="text" required> 
+          </div>
+          </fieldset>
+        </fieldset>
+        <h2>Единовременное пособие прошу перечислить на личный счет, открытый на мое имя в кредитной организации, расположенной на территории Российской Федерации</h2>
+        <fieldset class="bank-details">
+          <legend>Банковские реквизиты</legend>
+          <div>
+            <label for="bank-name">Наименование банка</label><span class="star">*</span>
+            <textarea data-validation="custom" data-validation-regexp="^([/\-//\s//\№/А-Яа-я0-9]+)$" data-validation-error-msg="Заполните поле" name="bank-name" id="bank-name" cols="30" rows="2" required></textarea>
+          </div>
+          <div>
+            <label for="bank-BIK">БИК</label><span class="star">*</span>
+            <input data-validation="length custom" data-validation-length="9-9" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите 9 цифр" id="bank-BIK" name="bank-BIK" type="text" required>
+          </div>
+          <div>
+            <label for="bank-INN">ИНН</label><span class="star">*</span>
+            <input data-validation="length custom" data-validation-length="10-12" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите от 10 до 12 цифр" id="bank-INN" name="bank-INN" type="text" required>
+          </div>
+          <div>
+            <label for="bank-KPP">КПП</label><span class="star">*</span>
+            <input data-validation="length custom" data-validation-length="9-9" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите 9 цифр" id="bank-KPP" name="bank-KPP" type="text" required>
+          </div>
+          <div>
+            <label for="bank-checking-account">Р/С</label><span class="star">*</span>
+            <input data-validation="length custom" data-validation-length="20-20" data-validation-regexp="^([0-9]+)$" data-validation-error-msg="Введите 20 цифр" id="bank-checking-account" name="bank-checking-account" type="text" required>
+          </div>
+        </fieldset>
+      </fieldset>
+      <fieldset class="documents">
+        <legend>Прилагаемые документы</legend>
+        <div class="documents-upload">
+          <p>Вступившее в законную силу решение суда об усыновлении либо выписка из решения органа опеки и попечительства об установлении над ребенком опеки (попечительства), в том числе по договору о приемной семъе</p>
+          <span class="star">*</span><input data-validation="mime" data-validation-error-msg="Прикрепите файл" data-validation-allowing="doc, docx, jpg, png" type="file" required>
+        </div>
+      </fieldset>
+      <input type="submit" value="Отправить">
+    </form>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="jquery-validation/form-validator/jquery.form-validator.min.js"></script>
+  <script>
+    $.validate({
+      lang: 'ru',
+      modules: 'html5, file, date'
+    });
+  </script>
+  </body>
+</html>
